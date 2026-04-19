@@ -130,7 +130,7 @@ export default function Frame3() {
       >
         <span>{`You watched `}</span>
         <span className="font-['Proxima_Nova:Bold',sans-serif]">54</span>
-        <span>{` episodes. We get it. We love John Snow too.`}</span>
+        <span>{` episodes. We get it. We love Jon Snow too.`}</span>
       </motion.p>
 
       {/* Bottom gradient blob */}

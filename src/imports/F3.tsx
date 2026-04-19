@@ -119,7 +119,7 @@ export default function F() {
       <p className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[0px] text-[18px] text-center top-[605.23px] translate-x-[-50%] w-[280px]">
         <span>{`You watched `}</span>
         <span className="font-['Proxima_Nova:Bold',sans-serif]">54</span>
-        <span>{` episodes. We get it. We love John Snow too.`}</span>
+        <span>{` episodes. We get it. We love Jon Snow too.`}</span>
       </p>
       <div className="absolute h-[430.932px] left-[-57px] top-[638px] w-[450px]" data-name="Gemini_Generated_Image_uhyq65uhyq65uhyq 4">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
