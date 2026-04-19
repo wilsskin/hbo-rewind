@@ -226,7 +226,7 @@ export default function Frame8() {
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay: 1.6, duration: 0.5, type: "spring", stiffness: 150 }}
-        className="absolute bg-white content-stretch flex gap-[8px] items-center justify-center left-[calc(50%-107.13px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
+        className="absolute bg-white content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%-107.13px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
       >
         <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-black text-center whitespace-pre">Share</p>
         <Share />
@@ -236,7 +236,7 @@ export default function Frame8() {
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay: 1.7, duration: 0.5, type: "spring", stiffness: 150 }}
-        className="absolute bg-[#0f0f0f] content-stretch flex gap-[8px] items-center justify-center left-[calc(50%+71px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
+        className="absolute bg-[#0f0f0f] content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%+71px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
       >
         <div aria-hidden="true" className="absolute border border-solid border-white inset-[-0.5px] pointer-events-none rounded-[80.5px]" />
         <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-pre">Your 2026 Picks</p>
