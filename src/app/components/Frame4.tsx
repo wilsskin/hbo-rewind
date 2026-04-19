@@ -136,7 +136,7 @@ export default function Frame4() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.4 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[16px] left-[301.5px] not-italic text-[18px] text-center text-white top-[178px] translate-x-[-50%] whitespace-pre"
+        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[16px] left-[301.5px] not-italic text-[16px] text-center text-white top-[178px] translate-x-[-50%] whitespace-pre"
       >
         to movies
       </motion.p>
