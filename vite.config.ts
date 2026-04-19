@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
@@ -17,6 +18,16 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  test: {
+    environment: 'happy-dom',
+    globals: true,
+    setupFiles: ['./src/test/setup.ts'],
+    server: {
+      deps: {
+        inline: ['@asamuzakjp/css-color', '@csstools/css-calc', '@csstools/css-color-4', '@csstools/color-helpers'],
+      },
+    },
+  },
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
