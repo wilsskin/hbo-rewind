@@ -95,7 +95,7 @@ export default function Frame4() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute flex h-[430.932px] items-center justify-center left-[-31px] top-[-189px] w-[450px]"
       >
         <div className="flex-none rotate-[180deg]">
@@ -187,7 +187,7 @@ export default function Frame4() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute h-[430.932px] left-[-57px] top-[638px] w-[450px]"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

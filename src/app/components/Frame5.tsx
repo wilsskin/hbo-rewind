@@ -91,7 +91,7 @@ export default function Frame5() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <Group />
       </motion.div>
