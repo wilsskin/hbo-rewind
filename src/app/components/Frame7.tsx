@@ -114,11 +114,17 @@ function Cancel() {
 }
 
 export default function Frame7() {
-  const rankings = [
-    { rank: 1, name: "Mom", minutes: "24,897", barTop: 295, barWidth: 264, borderRadius: "84.211px" },
-    { rank: 2, name: "Wilson", minutes: "17,382", barTop: 391, barWidth: 240, borderRadius: "105.263px" },
-    { rank: 3, name: "Oliver", minutes: "14,631", barTop: 487, barWidth: 216, borderRadius: "83.77px" },
+  const rankingsData = [
+    { rank: 1, name: "Mom", minutes: "24,897", minutesRaw: 24897, barTop: 295, borderRadius: "84.211px" },
+    { rank: 2, name: "Wilson", minutes: "17,382", minutesRaw: 17382, barTop: 391, borderRadius: "105.263px" },
+    { rank: 3, name: "Oliver", minutes: "14,631", minutesRaw: 14631, barTop: 487, borderRadius: "83.77px" },
   ];
+  const maxMinutes = Math.max(...rankingsData.map(r => r.minutesRaw));
+  const maxBarWidth = 264;
+  const rankings = rankingsData.map(r => ({
+    ...r,
+    barWidth: Math.round(maxBarWidth * r.minutesRaw / maxMinutes),
+  }));
 
   return (
     <div className="bg-[#0f0f0f] relative size-full" data-name="F7">
