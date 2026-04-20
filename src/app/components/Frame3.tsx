@@ -83,12 +83,12 @@ export default function Frame3() {
       
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-nowrap text-white top-[7.63%]">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-nowrap text-white top-[7.63%]">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated show poster with zoom effect */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.6, rotateY: 90 }}
+        initial={{ opacity: 0, scale: 1, rotateY: 90 }}
         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
         transition={{ delay: 0.4, duration: 1, type: "spring", stiffness: 100 }}
         className="absolute left-[calc(50%+0.5px)] pointer-events-none size-[298px] top-[192px] translate-x-[-50%]"
@@ -106,7 +106,7 @@ export default function Frame3() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[509.2px] translate-x-[-50%] w-[280px]"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[509.2px] translate-x-[-50%] w-[280px]"
       >
         {` Your top show `}
       </motion.p>
@@ -116,7 +116,7 @@ export default function Frame3() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.0, duration: 0.6, type: "spring", stiffness: 150 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[#ccc] text-[28px] text-center top-[545.23px] translate-x-[-50%] w-[280px]"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[#ccc] text-[28px] text-center top-[545.23px] translate-x-[-50%] w-[280px]"
       >
         Game of Thrones
       </motion.p>
@@ -126,10 +126,10 @@ export default function Frame3() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.3, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[0px] text-[18px] text-center top-[605.23px] translate-x-[-50%] w-[280px]"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[0px] text-[18px] text-center top-[605.23px] translate-x-[-50%] w-[280px]"
       >
         <span>{`You watched `}</span>
-        <span className="font-['Proxima_Nova:Bold',sans-serif]">54</span>
+        <span className="font-['Hanken_Grotesk:Bold',sans-serif]">54</span>
         <span>{` episodes. We get it. We love Jon Snow too.`}</span>
       </motion.p>
 

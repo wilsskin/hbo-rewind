@@ -100,7 +100,7 @@ export default function Frame5() {
       
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated intro text */}
@@ -108,7 +108,7 @@ export default function Frame5() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="absolute font-['Proxima_Nova:Bold',sans-serif] leading-[16px] left-1/2 not-italic text-[18px] text-center text-white top-[192px] translate-x-[-50%] whitespace-pre"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[16px] left-1/2 not-italic text-[18px] text-center text-white top-[192px] translate-x-[-50%] whitespace-pre"
       >
         You're the
       </motion.p>
@@ -120,7 +120,7 @@ export default function Frame5() {
         transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 150 }}
         className="absolute bg-white content-stretch flex items-center justify-center left-1/2 px-[8px] py-[4px] top-[224px] translate-x-[-50%]"
       >
-        <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Binge Watching Warrior</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Binge Watching Warrior</p>
       </motion.div>
 
       {/* Animated illustration */}
@@ -141,10 +141,10 @@ export default function Frame5() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.0, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[197px] not-italic text-[#ccc] text-[18px] text-center top-[605px] translate-x-[-50%] w-[258px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[197px] not-italic text-[#ccc] text-[18px] text-center top-[605px] translate-x-[-50%] w-[258px] whitespace-pre-wrap"
       >
         <span>{`You finished the first season of Succession in just `}</span>
-        <span className="font-['Proxima_Nova:Bold',sans-serif]">3</span>
+        <span className="font-['Hanken_Grotesk:Bold',sans-serif]">3</span>
         <span>{` days `}</span>
       </motion.p>
 
@@ -152,7 +152,7 @@ export default function Frame5() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[197px] not-italic text-[#ccc] text-[18px] text-center top-[677px] translate-x-[-50%] w-[258px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[197px] not-italic text-[#ccc] text-[18px] text-center top-[677px] translate-x-[-50%] w-[258px] whitespace-pre-wrap"
       >
         No days off in the Roy family
       </motion.p>

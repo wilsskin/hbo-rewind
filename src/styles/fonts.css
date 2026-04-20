@@ -8,32 +8,31 @@
   font-display: swap;
 }
 
-/* Proxima Nova Regular — body text, captions, secondary labels */
-/* Matches: font-['Proxima_Nova:Regular',sans-serif] */
-/* Currently using Nunito as substitute; replace Nunito-Regular.woff2 with ProximaNova-Regular.woff2 */
+/* Hanken Grotesk Regular — body text, captions, secondary labels */
+/* Matches: font-['Hanken_Grotesk:Regular',sans-serif] */
 @font-face {
-  font-family: 'Proxima Nova:Regular';
-  src: url('/fonts/Nunito-Regular.woff2') format('woff2');
+  font-family: 'Hanken Grotesk:Regular';
+  src: local('Hanken Grotesk Regular'), local('HankenGrotesk-Regular');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* Proxima Nova Medium — semi-prominent UI labels (Rewind button) */
-/* Matches: font-['Proxima_Nova:Medium',sans-serif] */
+/* Hanken Grotesk Medium — semi-prominent UI labels */
+/* Matches: font-['Hanken_Grotesk:Medium',sans-serif] */
 @font-face {
-  font-family: 'Proxima Nova:Medium';
-  src: url('/fonts/Nunito-Medium.woff2') format('woff2');
+  font-family: 'Hanken Grotesk:Medium';
+  src: local('Hanken Grotesk Medium'), local('HankenGrotesk-Medium');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-/* Proxima Nova Bold — headings, badge text, show names, bold counts */
-/* Matches: font-['Proxima_Nova:Bold',sans-serif] */
+/* Hanken Grotesk Bold — headings, badge text, show names, bold counts */
+/* Matches: font-['Hanken_Grotesk:Bold',sans-serif] */
 @font-face {
-  font-family: 'Proxima Nova:Bold';
-  src: url('/fonts/Nunito-Bold.woff2') format('woff2');
+  font-family: 'Hanken Grotesk:Bold';
+  src: local('Hanken Grotesk Bold'), local('HankenGrotesk-Bold');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

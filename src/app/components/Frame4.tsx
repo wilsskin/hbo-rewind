@@ -111,7 +111,7 @@ export default function Frame4() {
       
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated title */}
@@ -121,7 +121,7 @@ export default function Frame4() {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="absolute bg-white content-stretch flex items-center justify-center left-[calc(50%-84.5px)] px-[8px] py-[4px] top-[168px] translate-x-[-50%] w-[176px]"
       >
-        <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Top 5 shows</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Top 5 shows</p>
       </motion.div>
 
       <motion.div
@@ -136,7 +136,7 @@ export default function Frame4() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.4 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[16px] left-[301.5px] not-italic text-[16px] text-center text-white top-[178px] translate-x-[-50%] whitespace-pre"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[16px] left-[301.5px] not-italic text-[16px] text-center text-white top-[178px] translate-x-[-50%] whitespace-pre"
       >
         to movies
       </motion.p>
@@ -151,7 +151,7 @@ export default function Frame4() {
             transition={{ delay: 0.6 + index * 0.15, duration: 0.5, type: "spring", stiffness: 100 }}
             className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full"
           >
-            <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[1.33] not-italic relative shrink-0 text-[18px] text-center text-white whitespace-pre">
+            <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[1.33] not-italic relative shrink-0 text-[18px] text-center text-white whitespace-pre">
               {show.rank}
             </p>
             
@@ -177,8 +177,8 @@ export default function Frame4() {
             )}
             
             <div className="content-stretch flex flex-col gap-[4px] items-start leading-[18px] not-italic relative shrink-0 w-[133px] whitespace-pre-wrap">
-              <p className="font-['Proxima_Nova:Bold',sans-serif] relative shrink-0 text-[18px] text-white w-full">{show.name}</p>
-              <p className="font-['Proxima_Nova:Regular',sans-serif] relative shrink-0 text-[#ccc] text-[16px] w-full">{show.episodes} episodes</p>
+              <p className="font-['Hanken_Grotesk:Bold',sans-serif] relative shrink-0 text-[18px] text-white w-full">{show.name}</p>
+              <p className="font-['Hanken_Grotesk:Regular',sans-serif] relative shrink-0 text-[#ccc] text-[16px] w-full">{show.episodes} episodes</p>
             </div>
           </motion.div>
         ))}

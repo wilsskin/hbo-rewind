@@ -1,25 +1,39 @@
+import { motion } from "motion/react";
+
 interface ProgressIndicatorProps {
   currentFrame: number;
   totalFrames: number;
+  durationSeconds: number;
 }
 
-export default function ProgressIndicator({ currentFrame, totalFrames }: ProgressIndicatorProps) {
+export default function ProgressIndicator({ currentFrame, totalFrames, durationSeconds }: ProgressIndicatorProps) {
   return (
-    <div className="absolute top-[100px] left-1/2 -translate-x-1/2 z-50 flex gap-[3.431px] pointer-events-none">
-      {Array.from({ length: totalFrames }).map((_, index) => (
-        <div
-          key={index}
-          className="h-[3.818px] w-[41.998px] transition-all duration-300"
-          style={{
-            backgroundImage:
-              index <= currentFrame
-                ? "linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%)"
-                : "linear-gradient(90deg, rgb(37, 39, 45) 0%, rgb(37, 39, 45) 100%)",
-          }}
-        >
-          <div className="absolute border-[0.479px] border-[rgba(255,255,255,0.1)] border-solid inset-[-0.479px]" />
-        </div>
-      ))}
+    <div className="absolute top-[100px] inset-x-0 z-50 flex gap-[3px] px-4 pointer-events-none">
+      {Array.from({ length: totalFrames }).map((_, index) => {
+        const isCompleted = index < currentFrame;
+        const isCurrent = index === currentFrame;
+
+        return (
+          <div
+            key={index}
+            className="flex-1 h-[4px] rounded-full overflow-hidden"
+            style={{ background: "rgba(255,255,255,0.28)" }}
+          >
+            {isCompleted && (
+              <div className="h-full w-full rounded-full bg-white" />
+            )}
+            {isCurrent && (
+              <motion.div
+                key={currentFrame}
+                className="h-full rounded-full bg-white"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: durationSeconds, ease: "linear" }}
+              />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

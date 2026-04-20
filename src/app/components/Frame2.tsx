@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, animate } from "motion/react";
+import { motion, useMotionValue, useTransform, animate, useAnimate } from "motion/react";
 import { useEffect, useState } from "react";
 import svgPaths from "@/imports/svg-ex4saogr23";
 import imgScreenshot20251219At45630Pm from "figma:asset/9e2272604d8ec4fc668e706979a5e47cffcd061a.png";
@@ -123,7 +123,7 @@ function AnimatedCounter({ target, delay = 0 }: { target: number; delay?: number
     const controls = animate(count, target, {
       duration: 1.2,
       delay,
-      ease: "easeOut",
+      ease: [0.16, 1, 0.3, 1], // expo-out: starts fast, grinds to a stop — counter "lands" with weight
     });
 
     const unsubscribe = rounded.on("change", (latest) => {
@@ -140,15 +140,26 @@ function AnimatedCounter({ target, delay = 0 }: { target: number; delay?: number
 }
 
 export default function Frame2() {
+  const [numberRef, animatePop] = useAnimate();
+
+  useEffect(() => {
+    // counter: delay 0.5 + duration 1.2 = lands at ~1.75s — pulse the number when it settles
+    const timer = setTimeout(() => {
+      animatePop(numberRef.current, { scale: [1, 1.07, 1] }, { duration: 0.35, ease: [0.34, 1.56, 0.64, 1] });
+    }, 1750);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-[#0f0f0f] relative size-full" data-name="F2">
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-nowrap text-white top-[7.63%]">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-nowrap text-white top-[7.63%]">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated big number with counter */}
       <motion.p
+        ref={numberRef}
         initial={{ opacity: 0, scale: 0.5, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 100 }}
@@ -163,15 +174,15 @@ export default function Frame2() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.0, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[0px] text-[18px] text-center top-[422px] translate-x-[-50%] w-[280px]"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[0px] text-[18px] text-center top-[422px] translate-x-[-50%] w-[280px]"
       >
         <span>{`You watched for `}</span>
-        <span className="font-['Proxima_Nova:Bold',sans-serif]">17,382</span>
+        <span className="font-['Hanken_Grotesk:Bold',sans-serif]">17,382</span>
         <span>{` minutes`}</span>
         <span>{`, with `}</span>
-        <span className="font-['Proxima_Nova:Bold',sans-serif]">42</span>
+        <span className="font-['Hanken_Grotesk:Bold',sans-serif]">42</span>
         <span>{` movies and `}</span>
-        <span className="font-['Proxima_Nova:Bold',sans-serif]">183</span>
+        <span className="font-['Hanken_Grotesk:Bold',sans-serif]">183</span>
         <span>{` episodes`}</span>
       </motion.p>
 
@@ -179,7 +190,7 @@ export default function Frame2() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.3, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[196px] not-italic text-[18px] text-center text-nowrap text-white top-[518px] translate-x-[-50%]"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[196px] not-italic text-[18px] text-center text-nowrap text-white top-[518px] translate-x-[-50%]"
       >
         You made room for great stories.
       </motion.p>
@@ -188,7 +199,7 @@ export default function Frame2() {
       <motion.div
         initial={{ opacity: 0, rotate: 20, scale: 0.8 }}
         animate={{ opacity: 1, rotate: 8, scale: 1 }}
-        transition={{ delay: 1.5, duration: 0.8, type: "spring", stiffness: 100 }}
+        transition={{ delay: 1.0, duration: 0.8, type: "spring", stiffness: 100 }}
         className="absolute flex h-[183.666px] items-center justify-center left-[-151px] top-[686px] w-[282.08px]"
         style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}
       >
@@ -203,7 +214,7 @@ export default function Frame2() {
       <motion.div
         initial={{ opacity: 0, rotate: -20, scale: 0.8 }}
         animate={{ opacity: 1, rotate: 342, scale: 1 }}
-        transition={{ delay: 1.7, duration: 0.8, type: "spring", stiffness: 100 }}
+        transition={{ delay: 1.2, duration: 0.8, type: "spring", stiffness: 100 }}
         className="absolute flex h-[222.687px] items-center justify-center left-[219.95px] top-[673.51px] w-[296.927px]"
         style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}
       >
@@ -219,7 +230,7 @@ export default function Frame2() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.9, duration: 0.8 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
         className="absolute contents h-[183.666px] left-[46.29px] top-[691.86px] w-[282.08px]"
       >
         <div className="absolute flex h-[183.666px] items-center justify-center left-[46.29px] top-[691.86px] w-[282.08px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>

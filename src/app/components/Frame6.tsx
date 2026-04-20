@@ -126,7 +126,7 @@ export default function Frame6() {
       
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated title */}
@@ -134,7 +134,7 @@ export default function Frame6() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[192px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[192px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
       >
         {` Your top genres `}
       </motion.p>
@@ -196,7 +196,7 @@ export default function Frame6() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute flex flex-col font-['Proxima_Nova:Bold',sans-serif] justify-center leading-[0] left-[89.5px] not-italic text-[18px] text-center text-white top-[491px] translate-x-[-50%] translate-y-[-50%] whitespace-nowrap"
+        className="absolute flex flex-col font-['Hanken_Grotesk:Bold',sans-serif] justify-center leading-[0] left-[89.5px] not-italic text-[18px] text-center text-white top-[491px] translate-x-[-50%] translate-y-[-50%] whitespace-nowrap"
       >
         <p className="leading-[18px] whitespace-pre">Sci-Fi</p>
       </motion.div>
@@ -205,7 +205,7 @@ export default function Frame6() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.6, duration: 0.5 }}
-        className="absolute flex flex-col font-['Proxima_Nova:Bold',sans-serif] justify-center leading-[0] left-[198.5px] not-italic text-[18px] text-center text-white top-[491px] translate-x-[-50%] translate-y-[-50%] whitespace-nowrap"
+        className="absolute flex flex-col font-['Hanken_Grotesk:Bold',sans-serif] justify-center leading-[0] left-[198.5px] not-italic text-[18px] text-center text-white top-[491px] translate-x-[-50%] translate-y-[-50%] whitespace-nowrap"
       >
         <p className="leading-[18px] whitespace-pre">Drama</p>
       </motion.div>
@@ -214,7 +214,7 @@ export default function Frame6() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.7, duration: 0.5 }}
-        className="absolute flex flex-col font-['Proxima_Nova:Bold',sans-serif] justify-center leading-[0] left-[305.5px] not-italic text-[18px] text-center text-white top-[491px] translate-x-[-50%] translate-y-[-50%] whitespace-nowrap"
+        className="absolute flex flex-col font-['Hanken_Grotesk:Bold',sans-serif] justify-center leading-[0] left-[305.5px] not-italic text-[18px] text-center text-white top-[491px] translate-x-[-50%] translate-y-[-50%] whitespace-nowrap"
       >
         <p className="leading-[18px] whitespace-pre">Action</p>
       </motion.div>
@@ -224,7 +224,7 @@ export default function Frame6() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.9, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[197px] not-italic text-[18px] text-center text-white top-[588px] translate-x-[-50%] w-[258px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[197px] not-italic text-[18px] text-center text-white top-[588px] translate-x-[-50%] w-[258px] whitespace-pre-wrap"
       >
         You came for the action. You stayed for the drama.
       </motion.p>

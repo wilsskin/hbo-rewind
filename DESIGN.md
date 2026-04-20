@@ -236,6 +236,42 @@ For cascading lists use `delay: base + index * 0.15` (tight, like Frame 4 show r
 
 ---
 
+## HBO Brand Motion Principles
+
+These principles distinguish HBO's cinematic aesthetic from generic streaming UI. Every animation decision should pass the test: does this feel like a film, or does it feel like an app?
+
+**Typography leads, always** — The hero stat or title is the *first* element to appear on every frame (delay ≤ 0.2s), not the last. Copy and context follow after. This mirrors how HBO title cards work: subject establishes itself before context arrives.
+
+**Deliberate pacing** — HBO motion never rushes. Standard entrance durations are 600–900ms. Spring stiffness for content-level elements stays ≤ 150. Anything faster or bouncier reads as "app", not "cinema".
+
+**Depth-push transitions** — Between-frame transitions feel like a film cut, not a carousel page-turn. The exiting frame scales down (0.92) and drifts slightly in its exit direction; the entering frame arrives from the side at 97% scale and settles to 100%. The asymmetry (small exit drift vs full-width entry) creates a "push away / new scene arrives" read.
+
+**Ambient backgrounds are alive** — Background blobs must use a slow continuous rotation loop (`duration: 40–60s, repeat: Infinity, ease: "linear"`). Static blobs look like a screenshot. Two blobs should rotate at different speeds (e.g. 40s and 55s) and with offset delays so they never sync.
+
+**Deep color stays deep** — Never introduce anything brighter than `#cccccc` for body text. The deep navy (`#00305C`), purple (`#40137A`), and magenta (`#7A1363`) accents exist only in blob gradients and occasional borders — never as solid fill on surfaces that compete with text.
+
+**No visible overshoot on content** — Reserve spring overshoot (e.g. `[0.34, 1.56, 0.64, 1]`) for micro-feedback moments (landing pop, badge arrive). Content entrances use springs that settle cleanly: `stiffness: 80–120, damping: 15+`.
+
+---
+
+## Wrapped Experience Principles
+
+What makes Spotify Wrapped, LinkedIn Year in Review, and similar stat-reveal experiences feel satisfying — and how to apply that here.
+
+**The two-act reveal** — Every stat frame has two acts: (1) the number lands alone, big, in silence for a beat, then (2) context copy arrives to explain it. Minimum 400ms separation between hero stat and supporting copy. Never reveal them simultaneously — the beat of "what does that mean?" before the answer is the tension that makes it engaging.
+
+**The landing moment** — When a counter finishes counting, something must happen. A scale micro-pulse (`scale: 1 → 1.07 → 1` over 350ms with `ease: [0.34, 1.56, 0.64, 1]`) signals arrival and punctuates the reveal. Without it the counter just stops — anticlimactic.
+
+**Counter easing that builds anticipation** — Use `ease: [0.16, 1, 0.3, 1]` (expo-out equivalent): starts very fast, decelerates sharply in the final 20% of values. The number feeling like it's "fighting to stop" at the final value creates more tension than a smooth ease-out. The user leans in as it slows.
+
+**Poster/image entrances are reveals, not fades** — Show art shouldn't just fade in. It should feel like it's being surfaced from behind. Use `rotateY: 90 → 0` (3D flip) or `scale: 1.1 → 1.0` (zoom-out reveal). Never `opacity: 0 → 1` alone for hero images — that's a loading state, not a reveal.
+
+**One wow moment per frame** — Design toward a single beat where everything resolves: the number lands and pulses, the poster flips into place, the bars hit their height. Avoid diluting it with too many simultaneous animations. Supporting elements should be clearly secondary.
+
+**Stat is the star, decoration is late** — The stat/number arrives first (delay 0.1–0.2s). The poster or primary visual arrives next (0.3–0.5s). Copy arrives after (0.7–0.9s). Decorative posters, tertiary text, and atmospheric elements arrive last (1.0s+). Decoration that arrives before the stat steals the reveal.
+
+---
+
 ## Spacing
 
 All layout is absolute-positioned to pixel-exact Figma coordinates. Spacing "tokens" below reflect constants that recur across frames — not a grid system.

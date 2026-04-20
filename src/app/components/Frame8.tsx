@@ -140,7 +140,7 @@ export default function Frame8() {
 
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated poster */}
@@ -163,7 +163,7 @@ export default function Frame8() {
         transition={{ delay: 0.6, duration: 0.6 }}
         className="absolute content-stretch flex flex-col gap-[8px] items-start leading-[18px] left-[32px] not-italic text-[18px] top-[512px]"
       >
-        <p className="font-['Proxima_Nova:Regular',sans-serif] relative shrink-0 text-[#ccc] whitespace-pre">Top Shows</p>
+        <p className="font-['Hanken_Grotesk:Regular',sans-serif] relative shrink-0 text-[#ccc] whitespace-pre">Top Shows</p>
         {shows.map((show, index) => (
           <motion.div
             key={show}
@@ -172,8 +172,8 @@ export default function Frame8() {
             transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
             className="content-stretch flex gap-[8px] items-center relative shrink-0 text-white"
           >
-            <p className="font-['Proxima_Nova:Bold',sans-serif] relative shrink-0 text-center whitespace-pre">{index + 1}</p>
-            <p className="font-['Proxima_Nova:Regular',sans-serif] relative shrink-0 whitespace-pre">{show}</p>
+            <p className="font-['Hanken_Grotesk:Bold',sans-serif] relative shrink-0 text-center whitespace-pre">{index + 1}</p>
+            <p className="font-['Hanken_Grotesk:Regular',sans-serif] relative shrink-0 whitespace-pre">{show}</p>
           </motion.div>
         ))}
       </motion.div>
@@ -185,7 +185,7 @@ export default function Frame8() {
         transition={{ delay: 0.6, duration: 0.6 }}
         className="absolute content-stretch flex flex-col gap-[8px] items-start leading-[18px] left-[223px] not-italic text-[18px] top-[512px]"
       >
-        <p className="font-['Proxima_Nova:Regular',sans-serif] relative shrink-0 text-[#ccc] text-center whitespace-pre">Top Movies</p>
+        <p className="font-['Hanken_Grotesk:Regular',sans-serif] relative shrink-0 text-[#ccc] text-center whitespace-pre">Top Movies</p>
         {movies.map((movie, index) => (
           <motion.div
             key={movie}
@@ -194,8 +194,8 @@ export default function Frame8() {
             transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
             className="content-stretch flex gap-[8px] items-center relative shrink-0 text-white"
           >
-            <p className="font-['Proxima_Nova:Bold',sans-serif] relative shrink-0 text-center whitespace-pre">{index + 1}</p>
-            <p className="font-['Proxima_Nova:Regular',sans-serif] relative shrink-0 whitespace-pre">{movie}</p>
+            <p className="font-['Hanken_Grotesk:Bold',sans-serif] relative shrink-0 text-center whitespace-pre">{index + 1}</p>
+            <p className="font-['Hanken_Grotesk:Regular',sans-serif] relative shrink-0 whitespace-pre">{movie}</p>
           </motion.div>
         ))}
       </motion.div>
@@ -207,8 +207,8 @@ export default function Frame8() {
         transition={{ delay: 1.3, duration: 0.6 }}
         className="absolute content-stretch flex flex-col gap-[8px] items-start left-[32px] not-italic top-[692px] w-[137px] whitespace-pre-wrap"
       >
-        <p className="font-['Proxima_Nova:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] text-center w-full">Minutes Watched</p>
-        <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[28px] relative shrink-0 text-[28px] text-white w-full">17,382</p>
+        <p className="font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] text-center w-full">Minutes Watched</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] relative shrink-0 text-[28px] text-white w-full">17,382</p>
       </motion.div>
 
       <motion.div
@@ -217,8 +217,8 @@ export default function Frame8() {
         transition={{ delay: 1.4, duration: 0.6 }}
         className="absolute content-stretch flex flex-col gap-[8px] items-start left-[223px] not-italic text-center top-[692px] w-[85px] whitespace-pre-wrap"
       >
-        <p className="font-['Proxima_Nova:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] w-full">Top Genre</p>
-        <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[28px] relative shrink-0 text-[28px] text-white w-full">Drama</p>
+        <p className="font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] w-full">Top Genre</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] relative shrink-0 text-[28px] text-white w-full">Drama</p>
       </motion.div>
 
       {/* Animated buttons */}
@@ -228,7 +228,7 @@ export default function Frame8() {
         transition={{ delay: 1.6, duration: 0.5, type: "spring", stiffness: 150 }}
         className="absolute bg-white content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%-107.13px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
       >
-        <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-black text-center whitespace-pre">Share</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-black text-center whitespace-pre">Share</p>
         <Share />
       </motion.div>
 
@@ -239,7 +239,7 @@ export default function Frame8() {
         className="absolute bg-[#0f0f0f] content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%+71px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
       >
         <div aria-hidden="true" className="absolute border border-solid border-white inset-[-0.5px] pointer-events-none rounded-[80.5px]" />
-        <p className="font-['Proxima_Nova:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-pre">Your 2026 Picks</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-pre">Your 2026 Picks</p>
         <ArrowRight />
       </motion.div>
     </div>

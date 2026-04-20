@@ -129,29 +129,35 @@ function Frame2() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 0.6 }}
+      transition={{ delay: 2.0, duration: 0.9, ease: "easeOut" }}
       className="absolute content-stretch flex gap-[8px] items-center left-[calc(50%-0.1px)] top-[812px] translate-x-[-50%]"
     >
       <Component3D911979508D4E9EA9D4806Ff143C1 />
-      <p className="font-['Proxima_Nova:Medium',sans-serif] leading-[1.33] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.5)] text-center text-nowrap">Rewind</p>
+      <p className="font-['Hanken_Grotesk:Medium',sans-serif] leading-[1.33] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.5)] text-center text-nowrap">Rewind</p>
     </motion.div>
   );
 }
 
 export default function Frame1() {
   return (
-    <div className="bg-[#0f0f0f] relative size-full" data-name="F1">
+    <div className="bg-[#0f0f0f] overflow-hidden relative size-full" data-name="F1">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        animate={{ opacity: 1, rotate: 360 }}
+        transition={{
+          opacity: { duration: 0.5 },
+          rotate: { duration: 40, repeat: Infinity, ease: "linear" },
+        }}
       >
         <Group />
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        animate={{ opacity: 1, rotate: 360 }}
+        transition={{
+          opacity: { duration: 0.5 },
+          rotate: { duration: 55, repeat: Infinity, ease: "linear", delay: 8 },
+        }}
         className="absolute flex inset-[14.2%_72.77%_51.53%_-3.56%] items-center justify-center"
       >
         <div className="flex-none h-[292px] rotate-[180deg] w-[121px]">
@@ -160,15 +166,16 @@ export default function Frame1() {
       </motion.div>
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-nowrap text-white top-[7.63%]">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-nowrap text-white top-[7.63%]">{`2025 Rewind `}</p>
       <Cancel />
       
-      {/* Animated profile image */}
+      {/* Animated profile image — slow bloom, no pop */}
       <motion.div
-        initial={{ scale: 0, opacity: 0 }}
+        initial={{ scale: 0.4, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
-        className="absolute left-[calc(50%-0.5px)] rounded-[189.474px] size-[144px] top-[calc(50%-162px)] translate-x-[-50%] translate-y-[-50%]"
+        transition={{ delay: 0.2, type: "spring", stiffness: 70, damping: 20 }}
+        className="absolute rounded-[189.474px] size-[144px]"
+        style={{ left: "calc(50% - 72.5px)", top: "calc(50% - 234px)" }}
         data-name="IMG_5712 1"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[189.474px]">
@@ -178,53 +185,60 @@ export default function Frame1() {
 
       {/* Animated greeting text */}
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Bold',sans-serif] leading-[28px] left-[calc(50%-75.5px)] not-italic text-[28px] text-nowrap text-white top-[360px]"
+        transition={{ delay: 0.55, duration: 0.85, ease: "easeOut" }}
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%-75.5px)] not-italic text-[28px] text-nowrap text-white top-[360px]"
       >
         Hey Wilson!
       </motion.p>
 
       {/* Animated description */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[16px] text-center top-[396px] translate-x-[-50%] w-[240px]"
+        transition={{ delay: 0.8, duration: 0.85, ease: "easeOut" }}
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[16px] text-center top-[396px] translate-x-[-50%] w-[240px]"
       >
         <p className="mb-0">Let's review your watch</p>
         <p>history from this year</p>
       </motion.div>
 
       {/* Background image with animation */}
-      <motion.div
-        initial={{ opacity: 0, scale: 1.2 }}
-        animate={{ opacity: 0.7, scale: 1 }}
-        transition={{ delay: 1.0, duration: 0.8 }}
-        className="absolute h-[337.975px] left-[-104px] top-[602px] w-[600px]"
-        data-name="HBO-Max-Quilt-Skewed.7df1a6a0 13"
-      >
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgHboMaxQuiltSkewed7Df1A6A013} />
-      </motion.div>
-
-      <div className="absolute h-[252px] left-1/2 top-[602px] translate-x-[-50%] w-[393px]" style={{ backgroundImage: "linear-gradient(180.093deg, rgb(15, 15, 15) 21.842%, rgba(15, 15, 15, 0.6) 99.874%)" }}>
-        <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_6px_32px_0px_#0f0f0f]" />
+      <div className="absolute overflow-hidden" style={{ left: "0.5px", right: "0.5px", top: "602px", height: "337.975px" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 0.7, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8, type: "spring", stiffness: 80, damping: 22 }}
+          className="absolute h-full"
+          style={{ left: "-104px", width: "600px" }}
+          data-name="HBO-Max-Quilt-Skewed.7df1a6a0 13"
+        >
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgHboMaxQuiltSkewed7Df1A6A013} />
+        </motion.div>
       </div>
 
-      {/* Animated 2025 text */}
+      <div className="absolute inset-x-0 h-[252px] top-[602px]" style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 15, 15, 0.94) 10%, rgba(15, 15, 15, 0.45) 100%)" }}>
+        <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_6px_32px_0px_#0f0f0f]" />
+      </div>
+      {/* Right-edge darkening */}
+      <div className="absolute pointer-events-none right-0 top-[602px] h-[338px] w-[100px]" style={{ backgroundImage: "linear-gradient(90deg, transparent, rgba(15,15,15,0.92))" }} />
+      {/* Left-edge darkening */}
+      <div className="absolute left-0 pointer-events-none top-[602px] h-[338px] w-[60px]" style={{ backgroundImage: "linear-gradient(270deg, transparent, rgba(15,15,15,0.85))" }} />
+
+      {/* Animated 2025 text — arrives last as the dramatic payoff */}
       <motion.p
-        initial={{ opacity: 0, scale: 0.8, y: 50 }}
+        initial={{ opacity: 0, scale: 0.5, y: 300 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ delay: 1.1, duration: 0.8, type: "spring", stiffness: 100 }}
+        transition={{ delay: 0.9, duration: 0.9, type: "spring", stiffness: 55, damping: 20 }}
         className="absolute bg-clip-text bg-gradient-to-b font-['Alfa_Slab_One:Regular',sans-serif] from-white leading-[normal] left-[calc(50%-165.5px)] not-italic text-[120px] text-nowrap to-[#999] top-[639px] tracking-[2.4px]"
-        style={{ WebkitTextFillColor: "transparent" }}
+        style={{ WebkitTextFillColor: "transparent", filter: "drop-shadow(0px 4px 18px rgba(0,0,0,0.6))" }}
       >
         2025
       </motion.p>
 
       <Frame2 />
-      <div className="absolute backdrop-blur-sm backdrop-filter blur filter h-[7px] left-1/2 top-[602px] translate-x-[-50%] w-[393px]" data-name="black overlay" style={{ backgroundImage: "linear-gradient(-0.100458deg, rgba(0, 0, 0, 0.125) 18.752%, rgba(0, 0, 0, 0.25) 148.8%)" }} />
+<div className="absolute backdrop-blur-sm backdrop-filter h-[7px] inset-x-0 top-[602px]" data-name="black overlay" style={{ backgroundImage: "linear-gradient(-0.100458deg, rgba(0, 0, 0, 0.125) 18.752%, rgba(0, 0, 0, 0.25) 148.8%)" }} />
     </div>
   );
 }

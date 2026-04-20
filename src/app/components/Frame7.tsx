@@ -138,7 +138,7 @@ export default function Frame7() {
       
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
-      <p className="absolute bottom-[90.26%] font-['Proxima_Nova:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
+      <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
       <Cancel />
 
       {/* Animated title */}
@@ -146,7 +146,7 @@ export default function Frame7() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[235px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[235px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
       >
         How you stack up
       </motion.p>
@@ -206,7 +206,7 @@ export default function Frame7() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.9 + index * 0.2, duration: 0.5 }}
-          className="absolute content-stretch flex flex-col font-['Proxima_Nova:Bold',sans-serif] gap-[4px] items-start leading-[18px] not-italic text-[18px] w-[53px]"
+          className="absolute content-stretch flex flex-col font-['Hanken_Grotesk:Bold',sans-serif] gap-[4px] items-start leading-[18px] not-italic text-[18px] w-[53px]"
           style={{ left: `${item.barWidth + 24}px`, top: `${item.barTop + 20}px` }}
         >
           <p className="min-w-full relative shrink-0 text-[#ccc] w-[min-content] whitespace-pre-wrap">#{item.rank}</p>
@@ -219,7 +219,7 @@ export default function Frame7() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
         style={{ left: "70.5px", top: "326px" }}
       >
         24,897 minutes
@@ -229,7 +229,7 @@ export default function Frame7() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.3, duration: 0.5 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
         style={{ left: "67.5px", top: "422px" }}
       >
         17,382 minutes
@@ -239,7 +239,7 @@ export default function Frame7() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
         style={{ left: "67px", top: "518px" }}
       >
         14,631 minutes
@@ -250,7 +250,7 @@ export default function Frame7() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.7, duration: 0.6 }}
-        className="absolute font-['Proxima_Nova:Regular',sans-serif] leading-[1.33] left-[calc(50%+0.5px)] not-italic text-[18px] text-center text-white top-[631px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%+0.5px)] not-italic text-[18px] text-center text-white top-[631px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
       >
         You weren't alone on the couch. Did Mom hog the remote?
       </motion.p>
