@@ -18,6 +18,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  base: '/hbo-rewind/',
   test: {
     environment: 'happy-dom',
     globals: true,
