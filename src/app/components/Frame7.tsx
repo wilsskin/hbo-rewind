@@ -82,7 +82,7 @@ function IconsRight() {
 
 function Frame1Component() {
   return (
-    <div className="absolute bottom-[95.31%] content-stretch flex gap-[206px] items-center left-[calc(50%-0.5px)] top-[2.82%] translate-x-[-50%]">
+    <div className="absolute bottom-[95.31%] content-stretch flex gap-[206px] items-center left-[calc(50%-0.5px)] top-[2.82%] -translate-x-1/2">
       <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[16px] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[0.2px] whitespace-pre">10:53</p>
       <IconsRight />
     </div>
@@ -114,56 +114,54 @@ function Cancel() {
 }
 
 export default function Frame7() {
-  const rankingsData = [
-    { rank: 1, name: "Mom", minutes: "24,897", minutesRaw: 24897, barTop: 295, borderRadius: "84.211px" },
-    { rank: 2, name: "Wilson", minutes: "17,382", minutesRaw: 17382, barTop: 391, borderRadius: "105.263px" },
-    { rank: 3, name: "Oliver", minutes: "14,631", minutesRaw: 14631, barTop: 487, borderRadius: "83.77px" },
+  const rankings = [
+    { rank: 1, name: "Mom",    minutes: "24,897", barWidth: 264, barTop: 295, borderRadius: "84.211px" },
+    { rank: 2, name: "Wilson", minutes: "17,382", barWidth: 240, barTop: 391, borderRadius: "105.263px" },
+    { rank: 3, name: "Oliver", minutes: "14,631", barWidth: 216, barTop: 487, borderRadius: "83.77px" },
   ];
-  const maxMinutes = Math.max(...rankingsData.map(r => r.minutesRaw));
-  const maxBarWidth = 264;
-  const rankings = rankingsData.map(r => ({
-    ...r,
-    barWidth: Math.round(maxBarWidth * r.minutesRaw / maxMinutes),
-  }));
 
   return (
     <div className="bg-[#0f0f0f] relative size-full" data-name="F7">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: 0.35 }}
         transition={{ duration: 0.8 }}
       >
         <Group />
       </motion.div>
-      
+
       <Frame1Component />
       <Component3D911979508D4E9EA9D4806Ff143C />
       <p className="absolute bottom-[90.26%] font-['Hanken_Grotesk:Bold',sans-serif] leading-[normal] left-[calc(50%-140.7px)] not-italic text-[18px] text-white top-[7.63%] whitespace-pre">{`2025 Rewind `}</p>
       <Cancel />
 
-      {/* Animated title */}
+      {/* Title */}
       <motion.p
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[235px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[235px] -translate-x-1/2 w-[280px]"
       >
         How you stack up
       </motion.p>
 
-      {/* Animated ranking bars */}
+      {/* Ranking bars */}
       {rankings.map((item, index) => (
         <motion.div
           key={item.rank}
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: item.barWidth, opacity: 1 }}
           transition={{ delay: 0.5 + index * 0.2, duration: 0.6, ease: "easeOut" }}
-          className="absolute bg-[#25272d] h-[80px] left-0 rounded-br-[50px] rounded-tr-[50px]"
+          className="absolute bg-[#25272d] h-[80px] left-0 overflow-hidden rounded-br-[50px] rounded-tr-[50px]"
           style={{ top: `${item.barTop}px` }}
-        />
+        >
+          <p className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] whitespace-nowrap" style={{ left: "16px", top: "31px" }}>
+            {item.minutes} min
+          </p>
+        </motion.div>
       ))}
 
-      {/* Animated profile images - positioned at the right edge of each bar */}
+      {/* Profile avatars — right edge of each bar */}
       {rankings.map((item, index) => (
         <motion.div
           key={`avatar-${item.rank}`}
@@ -171,35 +169,35 @@ export default function Frame7() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.7 + index * 0.2, duration: 0.5, type: "spring", stiffness: 200 }}
           className="absolute pointer-events-none size-[80px]"
-          style={{ 
+          style={{
             left: `${item.barWidth - 80}px`,
             top: `${item.barTop}px`,
-            borderRadius: item.borderRadius
+            borderRadius: item.borderRadius,
           }}
           data-name={`image-${item.name.toLowerCase()}`}
         >
           <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: item.borderRadius }}>
-            <img 
-              alt="" 
-              className="absolute max-w-none" 
+            <img
+              alt=""
+              className="absolute max-w-none"
               style={{
                 height: item.rank === 1 ? "690%" : item.rank === 2 ? "690%" : "686.39%",
                 left: item.rank === 1 ? "-45.26%" : item.rank === 2 ? "-172.11%" : "-45.03%",
                 top: item.rank === 1 ? "-114.74%" : item.rank === 2 ? "-114.74%" : "-269.63%",
-                width: item.rank === 1 ? "317.37%" : item.rank === 2 ? "317.37%" : "315.71%"
+                width: item.rank === 1 ? "317.37%" : item.rank === 2 ? "317.37%" : "315.71%",
               }}
-              src={imgImageWilson} 
+              src={imgImageWilson}
             />
           </div>
-          <div 
-            aria-hidden="true" 
-            className="absolute border border-[#3c4041] border-solid inset-[-1px]" 
+          <div
+            aria-hidden="true"
+            className="absolute border border-[#3c4041] border-solid inset-[-1px]"
             style={{ borderRadius: `calc(${item.borderRadius} + 1px)` }}
           />
         </motion.div>
       ))}
 
-      {/* Animated rank labels and names */}
+      {/* Rank labels and names */}
       {rankings.map((item, index) => (
         <motion.div
           key={`label-${item.rank}`}
@@ -214,43 +212,12 @@ export default function Frame7() {
         </motion.div>
       ))}
 
-      {/* Animated minutes text */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.5 }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
-        style={{ left: "70.5px", top: "326px" }}
-      >
-        24,897 minutes
-      </motion.p>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.3, duration: 0.5 }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
-        style={{ left: "67.5px", top: "422px" }}
-      >
-        17,382 minutes
-      </motion.p>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] not-italic text-[#ccc] text-[16px] text-center translate-x-[-50%] whitespace-pre"
-        style={{ left: "67px", top: "518px" }}
-      >
-        14,631 minutes
-      </motion.p>
-
-      {/* Animated description */}
+      {/* Description */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.7, duration: 0.6 }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%+0.5px)] not-italic text-[18px] text-center text-white top-[631px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%+0.5px)] not-italic text-[18px] text-center text-white top-[631px] -translate-x-1/2 w-[280px]"
       >
         You weren't alone on the couch. Did Mom hog the remote?
       </motion.p>

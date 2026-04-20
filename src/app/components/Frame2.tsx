@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, animate, useAnimate } from "motion/react";
+import { motion, useMotionValue, useTransform, animate } from "motion/react";
 import { useEffect, useState } from "react";
 import svgPaths from "@/imports/svg-ex4saogr23";
 import imgScreenshot20251219At45630Pm from "figma:asset/9e2272604d8ec4fc668e706979a5e47cffcd061a.png";
@@ -140,16 +140,6 @@ function AnimatedCounter({ target, delay = 0 }: { target: number; delay?: number
 }
 
 export default function Frame2() {
-  const [numberRef, animatePop] = useAnimate();
-
-  useEffect(() => {
-    // counter: delay 0.5 + duration 1.2 = lands at ~1.75s — pulse the number when it settles
-    const timer = setTimeout(() => {
-      animatePop(numberRef.current, { scale: [1, 1.07, 1] }, { duration: 0.35, ease: [0.34, 1.56, 0.64, 1] });
-    }, 1750);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="bg-[#0f0f0f] relative size-full" data-name="F2">
       <Frame1Component />
@@ -159,7 +149,6 @@ export default function Frame2() {
 
       {/* Animated big number with counter */}
       <motion.p
-        ref={numberRef}
         initial={{ opacity: 0, scale: 0.5, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 100 }}
@@ -212,7 +201,7 @@ export default function Frame2() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, rotate: -20, scale: 0.8 }}
+        initial={{ opacity: 0, rotate: 330, scale: 0.8 }}
         animate={{ opacity: 1, rotate: 342, scale: 1 }}
         transition={{ delay: 1.2, duration: 0.8, type: "spring", stiffness: 100 }}
         className="absolute flex h-[222.687px] items-center justify-center left-[219.95px] top-[673.51px] w-[296.927px]"
@@ -228,12 +217,12 @@ export default function Frame2() {
 
       {/* Center poster group */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4, duration: 0.8 }}
-        className="absolute contents h-[183.666px] left-[46.29px] top-[691.86px] w-[282.08px]"
+        initial={{ opacity: 0, y: 200, scale: 0.85 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ delay: 1.4, duration: 0.9, type: "spring", stiffness: 90, damping: 20 }}
+        className="absolute h-[183.666px] left-[46.29px] top-[691.86px] w-[282.08px]"
       >
-        <div className="absolute flex h-[183.666px] items-center justify-center left-[46.29px] top-[691.86px] w-[282.08px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
+        <div className="absolute flex h-[183.666px] items-center justify-center left-0 top-0 w-[282.08px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
           <div className="flex-none rotate-[352deg]">
             <div className="h-[148.368px] pointer-events-none relative w-[264px]" data-name="Screenshot 2025-12-19 at 4.56.30 PM">
               <div className="absolute inset-0 overflow-hidden">
@@ -243,7 +232,7 @@ export default function Frame2() {
             </div>
           </div>
         </div>
-        <div className="absolute flex h-[127.241px] items-center justify-center left-[102.74px] top-[739.46px] w-[170.931px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
+        <div className="absolute flex h-[127.241px] items-center justify-center left-[56.45px] top-[47.6px] w-[170.931px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
           <div className="flex-none rotate-[352deg]">
             <div className="h-[106.333px] relative w-[157.667px]" data-name="p8681514_b_h9_aa 2">
               <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -34,15 +34,156 @@ Gradient text appears on large display numbers: white-to-gray fade using `backgr
 
 ## Typography
 
-| Font | Weight | Usage |
-|------|--------|-------|
-| Alfa Slab One | Regular | Large display numbers (80–120px), the "2025" hero text |
-| Proxima Nova | Regular / Bold | All body copy, labels, screen titles (14–28px) |
-| SF Pro Display | Medium | Status bar time and icons (16px) |
+### Typefaces
 
-Font strings are applied as inline Tailwind utilities: `font-['Alfa_Slab_One:400']`.
+| Font | Weight(s) | Role |
+|------|-----------|------|
+| Alfa Slab One | Regular | Large display numbers (48–120px), hero "2025" text |
+| Hanken Grotesk | Regular, Medium, Bold | All body copy, labels, screen titles |
+| SF Pro Display | Medium | Status bar time only |
 
-Text sizes use Tailwind arbitrary values (`text-[80px]`). Line heights are explicit (`leading-[133%]`, `leading-[28px]`).
+Font strings are applied as inline Tailwind utilities: `font-['Alfa_Slab_One:Regular',sans-serif]`, `font-['Hanken_Grotesk:Bold',sans-serif]`. Note: the project previously referenced Proxima Nova in early design docs; the codebase uses Hanken Grotesk throughout.
+
+---
+
+### Font Styles Reference
+
+All sizes, weights, line heights, letter spacings, and colors documented from the actual component classes.
+
+#### Display — Hero Number (Alfa Slab One)
+
+| Name | Size | Weight | Line Height | Letter Spacing | Color | Used in |
+|------|------|--------|-------------|----------------|-------|---------|
+| Hero 2025 | 120px | Regular | normal | 2.4px | white→`#999` gradient | Frame 1 |
+| Watch Count | 80px | Regular | 80px | 1.6px | white→`#999` gradient | Frame 2 |
+| Rotated 2025 | 96px | Regular | 158px | 1.92px | `#d9d9d9`→`#737373` gradient | Frame 8 |
+| Chart Rank #1 | 80px | Regular | 64px | — | white | Frame 6 |
+| Chart Rank #2/#3 | 48px | Regular | 48px | — | `rgba(204,204,204,0.8)` | Frame 6 |
+
+Tailwind class pattern: `font-['Alfa_Slab_One:Regular',sans-serif]`
+
+---
+
+#### Title — Screen Title (Hanken Grotesk Bold 28px)
+
+| Property | Value |
+|----------|-------|
+| Size | 28px |
+| Weight | Bold |
+| Line height | 120% |
+| Letter spacing | −0.02em |
+| Color | `#ffffff` (primary) · `#cccccc` (show name, Frame 3) · `#25272d` (badge labels on white bg, Frames 4 & 5) |
+| Used in | Frame 1 "Hey Wilson!", Frame 3 "Your top show" / "Game of Thrones", Frame 4 "Top 5 shows", Frame 5 "Binge Watching Warrior", Frame 6 "Your top genres", Frame 7 "How you stack up", Frame 8 stat values "17,382" / "Drama" |
+
+Tailwind class pattern: `font-bold font-['Hanken_Grotesk:Bold',sans-serif] text-[28px] leading-[120%] tracking-[-0.02em]`
+
+---
+
+#### Label — Top Chrome / Section Header (Hanken Grotesk Bold 18px)
+
+| Property | Value |
+|----------|-------|
+| Size | 18px |
+| Weight | Bold |
+| Line height | normal |
+| Letter spacing | — |
+| Color | `#ffffff` |
+| Used in | "2025 Rewind" header label (all frames via TopChrome) |
+
+Tailwind class pattern: `font-['Hanken_Grotesk:Bold',sans-serif] text-[18px] leading-[normal]`
+
+---
+
+#### Body — Supporting Copy (Hanken Grotesk Regular 18px)
+
+| Property | Value |
+|----------|-------|
+| Size | 18px |
+| Weight | Regular |
+| Line height | 1.33 (133%) |
+| Letter spacing | — |
+| Color | `#cccccc` (secondary) · `#ffffff` (primary) |
+| Used in | Taglines, supporting stats, body paragraphs (Frames 1–8) |
+
+Tailwind class pattern: `font-['Hanken_Grotesk:Regular',sans-serif] text-[18px] leading-[1.33]`
+
+Variant — stat micro-labels (Frame 8 "Minutes Watched" / "Top Genre"):  
+`font-['Hanken_Grotesk:Regular',sans-serif] text-[18px] leading-[18px]` · color `#cccccc`
+
+---
+
+#### List Item — Show / Row Name (Hanken Grotesk Bold 18px)
+
+| Property | Value |
+|----------|-------|
+| Size | 18px |
+| Weight | Bold |
+| Line height | 1.33 |
+| Color | `#ffffff` |
+| Used in | Frame 4 ranked list show names |
+
+Tailwind class pattern: `font-['Hanken_Grotesk:Bold',sans-serif] text-[18px] leading-[1.33]`
+
+---
+
+#### Small Label (Hanken Grotesk Regular/Bold 16px)
+
+| Variant | Size | Weight | Line Height | Color | Used in |
+|---------|------|--------|-------------|-------|---------|
+| Episode count / bar names | 16px | Regular | 18px | `#cccccc` | Frame 4 episode count, Frame 7 bar person labels |
+| Swap / nav label | 16px | Regular | 16px | `#ffffff` | Frame 4 swap icon label |
+| CTA button text | 16px | Bold | 1.15 | `#000000` (Share) · `#ffffff` (2026 Picks) | Frame 8 CTA buttons |
+
+Tailwind class patterns:
+- Regular: `font-['Hanken_Grotesk:Regular',sans-serif] text-[16px] leading-[18px]`
+- Bold CTA: `font-['Hanken_Grotesk:Bold',sans-serif] text-[16px] leading-[1.15]`
+
+---
+
+#### UI — Status Bar Time (SF Pro Display Medium 16px)
+
+| Property | Value |
+|----------|-------|
+| Size | 16px |
+| Weight | Medium |
+| Line height | 16px |
+| Letter spacing | 0.2px |
+| Color | `#ffffff` |
+| Used in | "10:53" clock (all frames) |
+
+Tailwind class pattern: `font-['SF_Pro_Display:Medium',sans-serif] text-[16px] leading-[16px] tracking-[0.2px]`
+
+---
+
+#### Accent — "Rewind" Badge Label (Hanken Grotesk Medium 18px)
+
+| Property | Value |
+|----------|-------|
+| Size | 18px |
+| Weight | Medium |
+| Line height | 1.33 |
+| Color | `rgba(255,255,255,0.5)` |
+| Used in | Frame 1 "Rewind" badge below logo |
+
+Tailwind class pattern: `font-['Hanken_Grotesk:Medium',sans-serif] text-[18px] leading-[1.33]`
+
+---
+
+### Typography Quick Reference
+
+| Style name | Size | Weight | LH | LS | Font |
+|------------|------|--------|----|----|------|
+| Display Hero | 96–120px | Regular | normal | 1.6–2.4px | Alfa Slab One |
+| Display Large | 80px | Regular | 80px | 1.6px | Alfa Slab One |
+| Display Medium | 48px | Regular | 48px | — | Alfa Slab One |
+| Screen Title | 28px | **Bold 700** | 120% | −0.02em | Hanken Grotesk |
+| Section Header | 18px | **Bold** | normal | — | Hanken Grotesk |
+| List Item Name | 18px | **Bold** | 1.33 | — | Hanken Grotesk |
+| Body Copy | 18px | Regular | 1.33 | — | Hanken Grotesk |
+| Stat Micro-label | 18px | Regular | 18px | — | Hanken Grotesk |
+| Small Label | 16px | Regular | 18px | — | Hanken Grotesk |
+| CTA Button | 16px | **Bold** | 1.15 | — | Hanken Grotesk |
+| Status Bar | 16px | Medium | 16px | 0.2px | SF Pro Display |
 
 ---
 

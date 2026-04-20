@@ -113,9 +113,28 @@ export default function Frame8() {
         </div>
       </div>
       
-      <div className="absolute flex h-[322px] items-center justify-center left-0 top-[159px] w-[201px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
+      {/* Additional blur elements from Figma */}
+      <div className="absolute blur-[24.8px] filter h-[50px] left-[365px] top-[157px] w-[28px]" style={{ backgroundImage: "linear-gradient(91.42deg, rgba(15, 15, 15, 0.45) 3.6252%, rgba(64, 19, 122, 0.18) 78.791%)" }} />
+      <div className="absolute blur-[24.8px] filter h-[20px] left-[216px] rounded-tl-[137px] top-[453px] w-[49px]" style={{ backgroundImage: "linear-gradient(96.2deg, rgba(15, 15, 15, 0.45) 3.6252%, rgba(64, 19, 122, 0.18) 78.791%)" }} />
+      <div className="absolute flex h-[288.645px] items-center justify-center left-[250.97px] top-[212px] w-[228.331px]">
+        <div className="flex-none rotate-[125deg]">
+          <div className="blur-[24.8px] filter h-[62.795px] rounded-bl-[300px] rounded-tr-[50.793px] w-[308.401px]" style={{ backgroundImage: "linear-gradient(123.38deg, rgba(15, 15, 15, 0.45) 2.836%, rgba(0, 49, 95, 0.18) 72.76%)" }} />
+        </div>
+      </div>
+      <div className="absolute blur-[24.8px] filter h-[59px] left-[271px] top-[416px] w-[122px]" style={{ backgroundImage: "linear-gradient(105.51deg, rgba(15, 15, 15, 0.45) 2.836%, rgba(0, 49, 95, 0.18) 72.76%)" }} />
+      <div className="absolute flex h-[322px] items-center justify-center left-0 top-[159px] w-[201px]">
         <div className="flex-none rotate-[270deg]">
           <div className="bg-[rgba(0,49,95,0.25)] blur-[24.8px] filter h-[201px] rounded-bl-[300px] w-[322px]" />
+        </div>
+      </div>
+      <div className="absolute flex h-[56px] items-center justify-center left-[165px] top-[156px] w-[205px]">
+        <div className="flex-none rotate-[90deg]">
+          <div className="bg-[rgba(0,49,95,0.25)] blur-[24.8px] filter h-[205px] rounded-bl-[300px] rounded-tr-[69px] w-[56px]" />
+        </div>
+      </div>
+      <div className="absolute flex h-[130px] items-center justify-center left-[4px] top-[341px] w-[235px]">
+        <div className="flex-none rotate-[90deg]">
+          <div className="bg-[rgba(0,49,95,0.25)] blur-[24.8px] filter h-[235px] rounded-bl-[33px] rounded-tr-[69px] w-[130px]" />
         </div>
       </div>
 
@@ -207,8 +226,8 @@ export default function Frame8() {
         transition={{ delay: 1.3, duration: 0.6 }}
         className="absolute content-stretch flex flex-col gap-[8px] items-start left-[32px] not-italic top-[692px] w-[137px] whitespace-pre-wrap"
       >
-        <p className="font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] text-center w-full">Minutes Watched</p>
-        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] relative shrink-0 text-[28px] text-white w-full">17,382</p>
+        <p className="font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] text-center w-full whitespace-nowrap">Minutes Watched</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[28px] relative shrink-0 text-[28px] text-white w-full">17,382</p>
       </motion.div>
 
       <motion.div
@@ -218,7 +237,7 @@ export default function Frame8() {
         className="absolute content-stretch flex flex-col gap-[8px] items-start left-[223px] not-italic text-center top-[692px] w-[85px] whitespace-pre-wrap"
       >
         <p className="font-['Hanken_Grotesk:Regular',sans-serif] leading-[18px] relative shrink-0 text-[#ccc] text-[18px] w-full">Top Genre</p>
-        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] relative shrink-0 text-[28px] text-white w-full">Drama</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[28px] relative shrink-0 text-[28px] text-white w-full">Drama</p>
       </motion.div>
 
       {/* Animated buttons */}
@@ -226,7 +245,7 @@ export default function Frame8() {
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay: 1.6, duration: 0.5, type: "spring", stiffness: 150 }}
-        className="absolute bg-white content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%-107.13px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
+        className="absolute bg-white content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%-115.13px)] px-[16px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
       >
         <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-black text-center whitespace-pre">Share</p>
         <Share />
@@ -236,9 +255,8 @@ export default function Frame8() {
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay: 1.7, duration: 0.5, type: "spring", stiffness: 150 }}
-        className="absolute bg-[#0f0f0f] content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%+71px)] px-[24px] py-[8px] rounded-[80px] top-[778px] translate-x-[-50%]"
+        className="absolute bg-[#0f0f0f] border border-solid border-white content-stretch cursor-pointer flex gap-[8px] items-center justify-center left-[calc(50%+79px)] px-[16px] py-[8px] rounded-[88px] top-[778px] translate-x-[-50%]"
       >
-        <div aria-hidden="true" className="absolute border border-solid border-white inset-[-0.5px] pointer-events-none rounded-[80.5px]" />
         <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[1.15] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-pre">Your 2026 Picks</p>
         <ArrowRight />
       </motion.div>

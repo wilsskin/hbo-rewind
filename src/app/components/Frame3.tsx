@@ -65,8 +65,8 @@ export default function Frame3() {
     <div className="bg-[#0f0f0f] relative size-full" data-name="F3">
       {/* Background gradient blobs - animated */}
       <motion.div
-        initial={{ opacity: 0, scale: 1.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute flex h-[430.932px] items-center justify-center left-[-31px] top-[-189px] w-[450px]"
       >
@@ -106,7 +106,7 @@ export default function Frame3() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}
-        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[509.2px] translate-x-[-50%] w-[280px]"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[509.2px] translate-x-[-50%] w-[280px]"
       >
         {` Your top show `}
       </motion.p>
@@ -116,7 +116,7 @@ export default function Frame3() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.0, duration: 0.6, type: "spring", stiffness: 150 }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[#ccc] text-[28px] text-center top-[545.23px] translate-x-[-50%] w-[280px]"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] left-[calc(50%+0.5px)] not-italic text-[#ccc] text-[28px] text-center top-[545.23px] translate-x-[-50%] w-[280px]"
       >
         Game of Thrones
       </motion.p>
@@ -135,9 +135,9 @@ export default function Frame3() {
 
       {/* Bottom gradient blob */}
       <motion.div
-        initial={{ opacity: 0, scale: 1.5 }}
+        initial={{ opacity: 1, scale: 0.4 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+        transition={{ delay: 0.3, type: "spring", stiffness: 80, damping: 14 }}
         className="absolute h-[430.932px] left-[-57px] top-[638px] w-[450px]"
         data-name="Gemini_Generated_Image_uhyq65uhyq65uhyq 4"
       >

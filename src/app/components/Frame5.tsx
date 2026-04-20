@@ -120,7 +120,7 @@ export default function Frame5() {
         transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 150 }}
         className="absolute bg-white content-stretch flex items-center justify-center left-1/2 px-[8px] py-[4px] top-[224px] translate-x-[-50%]"
       >
-        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Binge Watching Warrior</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Binge Watching Warrior</p>
       </motion.div>
 
       {/* Animated illustration */}

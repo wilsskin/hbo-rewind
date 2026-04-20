@@ -116,39 +116,32 @@ export default function Frame4() {
 
       {/* Animated title */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: -10 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.35, type: "spring", stiffness: 160, damping: 9, mass: 0.8 }}
         className="absolute bg-white content-stretch flex items-center justify-center left-[calc(50%-84.5px)] px-[8px] py-[4px] top-[168px] translate-x-[-50%] w-[176px]"
       >
-        <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Top 5 shows</p>
+        <p className="font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] not-italic relative shrink-0 text-[#25272d] text-[28px] text-center whitespace-pre">Top 5 shows</p>
       </motion.div>
 
+      {/* Change icon + label grouped, fade in early with no spin */}
       <motion.div
-        initial={{ opacity: 0, rotate: -180 }}
-        animate={{ opacity: 1, rotate: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
-        <ArrowReloadHorizontal />
-      </motion.div>
-
-      <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.4 }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[16px] left-[301.5px] not-italic text-[16px] text-center text-white top-[178px] translate-x-[-50%] whitespace-pre"
+        transition={{ delay: 0.1, duration: 0.5 }}
       >
-        to movies
-      </motion.p>
+        <ArrowReloadHorizontal />
+        <p className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[16px] left-[301.5px] not-italic text-[16px] text-center text-white top-[178px] translate-x-[-50%] whitespace-pre">to movies</p>
+      </motion.div>
 
       {/* Animated list items */}
       <div className="absolute content-stretch flex flex-col gap-[16px] items-start left-1/2 top-[236px] translate-x-[-50%] w-[345px]">
         {shows.map((show, index) => (
           <motion.div
             key={show.rank}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6 + index * 0.15, duration: 0.5, type: "spring", stiffness: 100 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65 + index * 0.28, type: "spring", stiffness: 50, damping: 14, mass: 1.1 }}
             className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full"
           >
             <p className="font-['Hanken_Grotesk:Bold',sans-serif] leading-[1.33] not-italic relative shrink-0 text-[18px] text-center text-white whitespace-pre">

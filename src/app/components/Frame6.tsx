@@ -134,7 +134,7 @@ export default function Frame6() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[192px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] left-[calc(50%+0.5px)] not-italic text-[28px] text-center text-white top-[192px] translate-x-[-50%] w-[280px] whitespace-pre-wrap"
       >
         {` Your top genres `}
       </motion.p>

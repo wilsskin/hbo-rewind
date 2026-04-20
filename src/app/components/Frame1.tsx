@@ -188,7 +188,7 @@ export default function Frame1() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.55, duration: 0.85, ease: "easeOut" }}
-        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] leading-[28px] left-[calc(50%-75.5px)] not-italic text-[28px] text-nowrap text-white top-[360px]"
+        className="absolute font-['Hanken_Grotesk:Bold',sans-serif] font-bold leading-[120%] tracking-[-0.02em] left-[calc(50%-75.5px)] not-italic text-[28px] text-nowrap text-white top-[360px]"
       >
         Hey Wilson!
       </motion.p>
@@ -198,33 +198,42 @@ export default function Frame1() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.85, ease: "easeOut" }}
-        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[16px] text-center top-[396px] translate-x-[-50%] w-[240px]"
+        className="absolute font-['Hanken_Grotesk:Regular',sans-serif] leading-[1.33] left-[calc(50%-0.5px)] not-italic text-[#ccc] text-[18px] text-center top-[396px] translate-x-[-50%] w-[240px]"
       >
         <p className="mb-0">Let's review your watch</p>
         <p>history from this year</p>
       </motion.div>
 
-      {/* Background image with animation */}
-      <div className="absolute overflow-hidden" style={{ left: "0.5px", right: "0.5px", top: "602px", height: "337.975px" }}>
-        <motion.div
-          initial={{ opacity: 0, y: 200 }}
-          animate={{ opacity: 0.7, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8, type: "spring", stiffness: 80, damping: 22 }}
-          className="absolute h-full"
-          style={{ left: "-104px", width: "600px" }}
-          data-name="HBO-Max-Quilt-Skewed.7df1a6a0 13"
-        >
-          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgHboMaxQuiltSkewed7Df1A6A013} />
-        </motion.div>
-      </div>
+      {/* Photo quilt + darkness overlays — one animated unit */}
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.8, type: "spring", stiffness: 80, damping: 22 }}
+        className="absolute inset-x-0"
+        style={{ top: "602px" }}
+      >
+        {/* Photo quilt */}
+        <div className="absolute overflow-hidden" style={{ left: "0.5px", right: "0.5px", top: 0, height: "337.975px" }}>
+          <div
+            className="absolute h-full"
+            style={{ left: "-104px", width: "600px", opacity: 0.7 }}
+            data-name="HBO-Max-Quilt-Skewed.7df1a6a0 13"
+          >
+            <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgHboMaxQuiltSkewed7Df1A6A013} />
+          </div>
+        </div>
 
-      <div className="absolute inset-x-0 h-[252px] top-[602px]" style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 15, 15, 0.94) 10%, rgba(15, 15, 15, 0.45) 100%)" }}>
-        <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_6px_32px_0px_#0f0f0f]" />
-      </div>
-      {/* Right-edge darkening */}
-      <div className="absolute pointer-events-none right-0 top-[602px] h-[338px] w-[100px]" style={{ backgroundImage: "linear-gradient(90deg, transparent, rgba(15,15,15,0.92))" }} />
-      {/* Left-edge darkening */}
-      <div className="absolute left-0 pointer-events-none top-[602px] h-[338px] w-[60px]" style={{ backgroundImage: "linear-gradient(270deg, transparent, rgba(15,15,15,0.85))" }} />
+        {/* Top gradient overlay */}
+        <div className="absolute inset-x-0 h-[252px] top-0" style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 15, 15, 0.94) 10%, rgba(15, 15, 15, 0.45) 100%)" }}>
+          <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_6px_32px_0px_#0f0f0f]" />
+        </div>
+        {/* Right-edge darkening */}
+        <div className="absolute pointer-events-none right-0 top-0 h-[338px] w-[100px]" style={{ backgroundImage: "linear-gradient(90deg, transparent, rgba(15,15,15,0.92))" }} />
+        {/* Left-edge darkening */}
+        <div className="absolute left-0 pointer-events-none top-0 h-[338px] w-[60px]" style={{ backgroundImage: "linear-gradient(270deg, transparent, rgba(15,15,15,0.85))" }} />
+        {/* Top-edge blur strip */}
+        <div className="absolute backdrop-blur-sm backdrop-filter h-[7px] inset-x-0 top-0" data-name="black overlay" style={{ backgroundImage: "linear-gradient(-0.100458deg, rgba(0, 0, 0, 0.125) 18.752%, rgba(0, 0, 0, 0.25) 148.8%)" }} />
+      </motion.div>
 
       {/* Animated 2025 text — arrives last as the dramatic payoff */}
       <motion.p
@@ -238,7 +247,6 @@ export default function Frame1() {
       </motion.p>
 
       <Frame2 />
-<div className="absolute backdrop-blur-sm backdrop-filter h-[7px] inset-x-0 top-[602px]" data-name="black overlay" style={{ backgroundImage: "linear-gradient(-0.100458deg, rgba(0, 0, 0, 0.125) 18.752%, rgba(0, 0, 0, 0.25) 148.8%)" }} />
     </div>
   );
 }

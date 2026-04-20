@@ -250,7 +250,7 @@ export default function App() {
           <TopChrome />
 
           {/* Progress Indicator — sits above TopChrome gradient (top-[100px]) */}
-          <ProgressIndicator currentFrame={currentFrame} totalFrames={totalFrames} durationSeconds={SEGMENT_DURATION} />
+          <ProgressIndicator currentFrame={currentFrame} totalFrames={totalFrames} durationSeconds={SEGMENT_DURATION} isPausedRef={isPausedRef} />
 
           {/* Clickable areas for navigation — mobile only (< 480px) */}
           <div
